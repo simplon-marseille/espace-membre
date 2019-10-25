@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="center">
+            <li class="link">Accueil</li>
+            <li>Nouvelle annonce</li>
+            <li>Connexion</li>
+            <li class="signup">Inscription</li>
+        </ul>
+    </nav>
+    <header>
+        <div class="img-header">
+            <img src="beach.jpeg" alt="">
+            <button type="button" class="btn btn-info new-ad" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus-square"></i> Nouvelle annonce</button>
+        </div>
+        <div class="user center">
+            <img src="images.jpeg" class="mr-3 avatar-xl" alt="...">
+            <div class="user-data">
+                <h5 class="mt-0">Jack Black</h5>
+                <ul class="social">
+                    <li style="color:#4267B2;"><i class="fab fa-facebook"></i></li>
+                    <li style="color:#1CA1F1;"><i class="fab fa-twitter-square"></i></li>
+                    <li style="color:#AB389C;"><i class="fab fa-instagram"></i></li>
+                </ul>
+                <h6>Membre depuis: 31/12/2014</h6>
+                <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, modi harum facere adipisci expedita aliquam molestiae quo dignissimos atque sunt.</h6>
+                <ul class="list-of-stars">
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li><i class="fas fa-star"></i></li>
+                    <li style="color: #D5D5D5;"><i class="fas fa-star"></i></li>
+                </ul>
+                  
+            </div>
+        </div> 
+    </header>
+    <!-- Publier une annonce ==> modal
+    Données personnel | Mes annonces  -->
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="personnal-data">
+                        <div class="bloc card">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aspernatur quibusdam quos? Distinctio explicabo voluptates maxime vero eveniet earum, qui voluptatibus eum a unde consequatur quae nobis ex provident placeat aspernatur blanditiis tempora quasi dignissimos asperiores porro consectetur reprehenderit? Architecto.
+                            </p>
+                        </div>
+                        <div class="bloc card">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aspernatur quibusdam quos? Distinctio explicabo voluptates maxime vero eveniet earum, qui voluptatibus eum a unde consequatur quae nobis ex provident placeat aspernatur blanditiis tempora quasi dignissimos asperiores porro consectetur reprehenderit? Architecto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-8">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><i class="fas fa-ad"></i> Annonces</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><i class="fas fa-user-edit"></i> Mettre à jour profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false"><i class="fas fa-comments"></i> Commentaires</a>
+                        </li>
+                    </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                <div class="card shadow-sm">
+                                    <div class="card-header">
+                                        Annonce 1
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Special title treatment</h5>
+                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Mettre à jour</a>
+                                        <a href="#" class="btn btn-primary">Effacer</a>
+                                        <a href="#" class="btn btn-primary">Publier</a>
+                                    </div>
+                                </div>
+                                <div class="card shadow-sm">
+                                    <div class="card-header">
+                                        Annonce 1
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Special title treatment</h5>
+                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Mettre à jour</a>
+                                        <a href="#" class="btn btn-primary">Effacer</a>
+                                        <a href="#" class="btn btn-primary">Publier</a>
+                                    </div>
+                                </div>      
+                            </div>
+                       
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                <form id="formulaire" @submit="ajaxRequestMap()">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Email</label>
+                                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Mot de passe</label>
+                                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputAddress">Addresse</label>
+                                        <input type="text" class="form-control" id="inputAddress" placeholder="Ex: 1234 Main St">
+                                    </div>
+                                
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                        <label for="inputCity">Ville</label>
+                                        <input type="text" class="form-control" v-model="maVariablePHP" id="inputCity">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                        <label for="inputZip">Code postal</label>
+                                        <input type="text" class="form-control" id="inputZip">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="inputState">Pays</label>
+                                            <select id="inputState" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>...</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <label for="photo">Mettre à jour vos photos de profils</label>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <button class="btn btn-primary">Photo de profile</button>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <button class="btn btn-primary">Photo espace membre</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">
+                                            Check me out
+                                        </label>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Mettre à jour</button>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                Commentaire
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mapid"></div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Nouvelle annonce</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+             <form>
+                 <div class="form-group">
+                     <label for="titre">Titre</label>
+                     <input type="text" class="form-control" placeholder="Titre">
+                 </div>
+                 <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea rows="10" row class="form-control" placeholder="Description"></textarea>
+                </div>
+                <button class="btn btn-warning">Uploader une photo</button>
+                <div class="form-group">
+                    <label for="prix">Prix</label>
+                    <input type="text" class="form-control" placeholder="Prix">
+                </div>
+             </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+              <button type="button" class="btn btn-primary">Publier mon annonce</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+    <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html> 
